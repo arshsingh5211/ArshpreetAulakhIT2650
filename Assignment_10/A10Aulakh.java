@@ -1,13 +1,10 @@
 //package IT2650.A10;
 
 class Car {
-	private Engine en;
-	
-	public Car (Engine en) {
-		en = this.en;
-	}
+	private Engine en; //aggregation (association will be passed as argument in start())
 
-	public void start(Engine en, Phone ph) {
+	public void start(Phone ph) {
+	    en = new Engine();
 		ph.connect();
 		en.combust();
 		System.out.println("Car has started!");
@@ -40,13 +37,11 @@ public class MyClass {
 	public static void main(String[] args) {
 		
 		System.out.println("Assignment 10 written by Arshpreet Aulakh\n");
-		Engine engine = new Engine();
-		Car mustang = new Car(engine);
+		Car mustang = new Car();
 		Phone android = new Phone();
 		
-		mustang.start(engine, android);
+		mustang.start(android);
 		
 		System.out.println("\nBye!");
 	}
 }
-
