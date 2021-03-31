@@ -39,14 +39,14 @@ class Dog extends Mammal implements Nameable {
 }
 
 class Head {
-	private String size;
+	private double headSize;
 
-	public String getSize() {
-		return size;
+	public Double getHeadSize() {
+		return headSize;
 	}
 
-	public void setSize(String size) {
-		this.size = size;
+	public void setHeadSize(Double headSize) {
+		this.headSize = headSize;
 	}
 }
 
